@@ -19,6 +19,10 @@
 > *branch : hotfix/0.0.1*<br>
 > *msg / [MRS-12345] feature: somethong*
 >> [MRS-12345] feature: somethong<br>
+---
+> *branch : feature/MRS-12345*<br>
+> *msg / MRS-12345 feature: somethong*
+>> [MRS-12345] MRS-12345 feature: somethong<br>
 
 -------
 <br>
