@@ -14,6 +14,11 @@
 chmod ug+x .git/hooks/prepare-commit-msg
 ```
 
+- 만약 권한을 주었는데 실행이 안된다면
+```
+git config --local core.hooksPath .git/hooks
+```
+
 - 커밋이 잘 들어갔나 확인
 
 ```console
