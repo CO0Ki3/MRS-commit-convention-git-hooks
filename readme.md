@@ -11,7 +11,7 @@
 ## 적용 시 필요할지도 모르는 커멘트 모음
 - 만약 권한이 없다면
 ```console
-chmod ug+x .git/hooks/prepare-commit-msg
+chmod ug+x .git/hooks/*
 ```
 
 - 만약 권한을 주었는데 실행이 안된다면
