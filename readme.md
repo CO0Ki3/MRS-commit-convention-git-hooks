@@ -3,7 +3,22 @@
 2. 브랜치 명이 MRS-00000 꼴이 아니면서, 커밋 메시지에 [MRS-00000]이 없는 경우
 > 2번 경우에는 [MRS-00000] prefix가 붙게 됩니다.
 
-<br>
+### Example
+> *branch : feature/MRS-12345*<br>
+> *msg / feature: somethong*
+>> [MRS-12345] feature: somethong<br>
+---
+> *branch : feature/MRS-12345*<br>
+> *msg / [MRS-54321] feature: somethong*
+>> [MRS-54321] feature: somethong<br>
+---
+> *branch : develop*<br>
+> *msg / feature: somethong*
+>> [MRS-00000] feature: somethong<br>
+---
+> *branch : hotfix/0.0.1*<br>
+> *msg / [MRS-12345] feature: somethong*
+>> [MRS-12345] feature: somethong<br>
 
 -------
 <br>
