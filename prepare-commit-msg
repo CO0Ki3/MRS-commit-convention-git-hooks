@@ -4,9 +4,9 @@ COMMIT_FILE_PATH=$1
 COMMIT_MSG=$(cat $COMMIT_FILE_PATH)
 CURRENT_BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
 
-if [[ $CURRENT_BRANCH_NAME =~ MRS-[0-9]{5} ]] && [[ ! $COMMIT_MSG =~ \[MRS-[0-9]{5}\] ]]; then
+if [[ $CURRENT_BRANCH_NAME =~ NMRS-[0-9]{1,9} ]] && [[ ! $COMMIT_MSG =~ \[NMRS-[0-9]{1,9}\] ]]; then
   ISSUE_TICKET=$(echo "$CURRENT_BRANCH_NAME" | sed 's/.*\///')
   echo "[$ISSUE_TICKET] $COMMIT_MSG" > $COMMIT_FILE_PATH
-elif [[ ! $CURRENT_BRANCH_NAME =~ MRS-[0-9]{5} ]] && [[ ! $COMMIT_MSG =~ \[MRS-[0-9]{5}\] ]]; then
-  echo "[MRS-00000] $COMMIT_MSG" > $COMMIT_FILE_PATH
+elif [[ ! $CURRENT_BRANCH_NAME =~ NMRS-[0-9]{1,9} ]] && [[ ! $COMMIT_MSG =~ \[NMRS-[0-9]{1,9}\] ]]; then
+  echo "[NMRS-00000] $COMMIT_MSG" > $COMMIT_FILE_PATH
 fi

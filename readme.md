@@ -1,28 +1,28 @@
 ## Prefix가 붙는 조건
-1. 브랜치 명이 MRS-00000 꼴이면서, 커밋 메시지에 [MRS-00000]이 없는 경우
-2. 브랜치 명이 MRS-00000 꼴이 아니면서, 커밋 메시지에 [MRS-00000]이 없는 경우
-> 2번 경우에는 [MRS-00000] prefix가 붙게 됩니다.
+1. 브랜치 명이 NMRS-숫자 꼴이면서, 커밋 메시지에 [NMRS-숫자]이 없는 경우
+2. 브랜치 명이 NMRS-숫자 꼴이 아니면서, 커밋 메시지에 [NMRS-숫자]이 없는 경우
+> 2번 경우에는 [NMRS-00000] prefix가 붙게 됩니다.
 
 ### Example
-> *branch : feature/MRS-12345*<br>
+> *branch : feature/NMRS-12345*<br>
 > *msg / feature: somethong*
->> [MRS-12345] feature: somethong<br>
+>> [NMRS-12345] feature: somethong<br>
 ---
-> *branch : feature/MRS-12345*<br>
-> *msg / [MRS-54321] feature: somethong*
->> [MRS-54321] feature: somethong<br>
+> *branch : feature/NMRS-12345*<br>
+> *msg / [NMRS-54321] feature: somethong*
+>> [NMRS-54321] feature: somethong<br>
 ---
 > *branch : develop*<br>
 > *msg / feature: somethong*
->> [MRS-00000] feature: somethong<br>
+>> [NMRS-00000] feature: somethong<br>
 ---
 > *branch : hotfix/0.0.1*<br>
-> *msg / [MRS-12345] feature: somethong*
->> [MRS-12345] feature: somethong<br>
+> *msg / [NMRS-12345] feature: somethong*
+>> [NMRS-12345] feature: somethong<br>
 ---
-> *branch : feature/MRS-12345*<br>
-> *msg / MRS-12345 feature: somethong*
->> [MRS-12345] MRS-12345 feature: somethong<br>
+> *branch : feature/NMRS-12345*<br>
+> *msg / NMRS-12345 feature: somethong*
+>> [NMRS-12345] NMRS-12345 feature: somethong<br>
 
 
 -------
